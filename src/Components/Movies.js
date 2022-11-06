@@ -14,7 +14,9 @@ export default class Movies extends Component {
 }
   async componentDidMount(){
     //Side effects 
-    const res = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=5540e483a20e0b20354dabc2d66a31c9&language=en-US&page=${this.state.currPage}`);
+    // const res = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=5540e483a20e0b20354dabc2d66a31c9&language=en-US&page=${this.state.currPage}`);
+    const res = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=aed6deb68d62584d09ccf2cef6d714a9&language=en-US&page=${this.state.currPage}`);
+   // https://api.themoviedb.org/3/movie/550?api_key=aed6deb68d62584d09ccf2cef6d714a9
     let data = res.data
     this.setState({
         movies:[...data.results]
